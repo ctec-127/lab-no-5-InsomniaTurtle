@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,12 +10,130 @@
     <link rel="stylesheet" href="css/style.css">
     <title>Lab No. 5</title>
 </head>
+
 <body>
-<div class="container-fluid">
+    <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+    <!-- php section -->
+    <?php
+    $goblins = false;
+    if (isset($_GET['aralia'])) {
+        if ($_GET['aralia'] == 'yes') {
+            $goblins = true;
+        } else {
+            if ($_GET['aralia'] == 'no') {
+                $goblins = false;
+            }
+        }
+    }
+
+    if (!isset($_GET['aralia'])) {
+        $goblins = true;
+    }
+
+    if ($goblins == true) {
+        include 'inc/aralia.html';
+    }
+    ?>
+    <?php
+    if (isset($_GET['arborvitae'])) {
+        if ($_GET['arborvitae'] == 'yes') {
+            $goblins = true;
+        } else {
+            if ($_GET['arborvitae'] == 'no') {
+                $goblins = false;
+            }
+        }
+    }
+
+    if (!isset($_GET['arborvitae'])) {
+        $goblins = true;
+    }
+
+    if ($goblins == true) {
+        include 'inc/arborvitae.html';
+    }
+    ?>
+    <?php
+    if (isset($_GET['ash'])) {
+        if ($_GET['ash'] == 'yes') {
+            $goblins = true;
+        } else {
+            if ($_GET['ash'] == 'no') {
+                $goblins = false;
+            }
+        }
+    }
+
+    if (!isset($_GET['ash'])) {
+        $goblins = true;
+    }
+
+    if ($goblins == true) {
+        include 'inc/ash.html';
+    }
+    ?>
+    <?php
+    if (isset($_GET['arborvitae' && 'aralia'])) {
+        if ($_GET['arborvitae' && 'aralia'] == 'yes') {
+            $goblins = true;
+        } else {
+            if ($_GET['arborvitae' && 'aralia'] == 'no') {
+                $goblins = false;
+            }
+        }
+    }
+
+    if (!isset($_GET['arborvitae' && 'aralia'])) {
+        $goblins = true;
+    }
+
+    if ($goblins == true) {
+        include 'inc/combo_1.html';
+    }
+    ?>
+    <?php
+    if (isset($_GET['arborvitae' && 'ash'])) {
+        if ($_GET['arborvitae' && 'ash'] == 'yes') {
+            $goblins = true;
+        } else {
+            if ($_GET['arborvitae' && 'ash'] == 'no') {
+                $goblins = false;
+            }
+        }
+    }
+
+    if (!isset($_GET['arborvitae' && 'ash'])) {
+        $goblins = true;
+    }
+
+    if ($goblins == true) {
+        include 'inc/combo_2.html';
+    }
+    ?>
+    <?php
+    if (isset($_GET['ash' && 'aralia'])) {
+        if ($_GET['ash' && 'aralia'] == 'yes') {
+            $goblins = true;
+        } else {
+            if ($_GET['ash' && 'aralia'] == 'no') {
+                $goblins = false;
+            }
+        }
+    }
+
+    if (!isset($_GET['ash' && 'aralia'])) {
+        $goblins = true;
+    }
+
+    if ($goblins == true) {
+        include 'inc/combo_3.html';
+    }
+    ?>
+    <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+    <div class="container-fluid">
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
             <a class="navbar-brand" href="#">Clark College Aboretum</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
 
@@ -127,11 +246,12 @@
                 </div>
             </div>
         </div>
-</div>
+    </div>
 
-<!-- jQuery -->
-<script src="js/jquery-3.3.1.min.js"></script>
-<!-- Bootstrap JavaScript -->
-<script src="js/bootstrap.min.js"></script>
+    <!-- jQuery -->
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <!-- Bootstrap JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
 </body>
+
 </html>
