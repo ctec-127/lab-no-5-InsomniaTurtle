@@ -12,124 +12,6 @@
 </head>
 
 <body>
-    <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
-    <!-- php section -->
-    <?php
-    $goblins = false;
-    if (isset($_GET['aralia'])) {
-        if ($_GET['aralia'] == 'yes') {
-            $goblins = true;
-        } else {
-            if ($_GET['aralia'] == 'no') {
-                $goblins = false;
-            }
-        }
-    }
-
-    if (!isset($_GET['aralia'])) {
-        $goblins = true;
-    }
-
-    if ($goblins == true) {
-        include 'inc/aralia.html';
-    }
-    ?>
-    <?php
-    if (isset($_GET['arborvitae'])) {
-        if ($_GET['arborvitae'] == 'yes') {
-            $goblins = true;
-        } else {
-            if ($_GET['arborvitae'] == 'no') {
-                $goblins = false;
-            }
-        }
-    }
-
-    if (!isset($_GET['arborvitae'])) {
-        $goblins = true;
-    }
-
-    if ($goblins == true) {
-        include 'inc/arborvitae.html';
-    }
-    ?>
-    <?php
-    if (isset($_GET['ash'])) {
-        if ($_GET['ash'] == 'yes') {
-            $goblins = true;
-        } else {
-            if ($_GET['ash'] == 'no') {
-                $goblins = false;
-            }
-        }
-    }
-
-    if (!isset($_GET['ash'])) {
-        $goblins = true;
-    }
-
-    if ($goblins == true) {
-        include 'inc/ash.html';
-    }
-    ?>
-    <?php
-    if (isset($_GET['arborvitae' && 'aralia'])) {
-        if ($_GET['arborvitae' && 'aralia'] == 'yes') {
-            $goblins = true;
-        } else {
-            if ($_GET['arborvitae' && 'aralia'] == 'no') {
-                $goblins = false;
-            }
-        }
-    }
-
-    if (!isset($_GET['arborvitae' && 'aralia'])) {
-        $goblins = true;
-    }
-
-    if ($goblins == true) {
-        include 'inc/combo_1.html';
-    }
-    ?>
-    <?php
-    if (isset($_GET['arborvitae' && 'ash'])) {
-        if ($_GET['arborvitae' && 'ash'] == 'yes') {
-            $goblins = true;
-        } else {
-            if ($_GET['arborvitae' && 'ash'] == 'no') {
-                $goblins = false;
-            }
-        }
-    }
-
-    if (!isset($_GET['arborvitae' && 'ash'])) {
-        $goblins = true;
-    }
-
-    if ($goblins == true) {
-        include 'inc/combo_2.html';
-    }
-    ?>
-    <?php
-    if (isset($_GET['ash' && 'aralia'])) {
-        if ($_GET['ash' && 'aralia'] == 'yes') {
-            $goblins = true;
-        } else {
-            if ($_GET['ash' && 'aralia'] == 'no') {
-                $goblins = false;
-            }
-        }
-    }
-
-    if (!isset($_GET['ash' && 'aralia'])) {
-        $goblins = true;
-    }
-
-    if ($goblins == true) {
-        include 'inc/combo_3.html';
-    }
-    ?>
-    <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
     <div class="container-fluid">
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
             <a class="navbar-brand" href="#">Clark College Aboretum</a>
@@ -247,6 +129,128 @@
             </div>
         </div>
     </div>
+
+    <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+    <!-- php section -->
+    <?php
+    $goblins = false;
+    if (isset($_GET['aralia'])) {
+        if ($_GET['aralia'] == 'yes') {
+            $goblins = true;
+        } else {
+            if ($_GET['aralia'] == 'no') {
+                $goblins = false;
+            }
+        }
+    }
+
+    if (!isset($_GET['aralia'])) {
+        $goblins = true;
+    }
+
+    if ($goblins == true) {
+        include 'inc/aralia.html';
+    }
+    ?>
+    <?php
+    if (isset($_GET['arborvitae'])) {
+        if ($_GET['arborvitae'] == 'yes') {
+            $goblins = true;
+        } else {
+            if ($_GET['arborvitae'] == 'no') {
+                $goblins = false;
+            }
+        }
+    }
+
+    if (!isset($_GET['arborvitae'])) {
+        $goblins = true;
+    }
+
+    if ($goblins == true) {
+        include 'inc/arborvitae.html';
+    }
+    ?>
+    <?php
+    if (isset($_GET['ash'])) {
+        if ($_GET['ash'] == 'yes') {
+            $goblins = true;
+        } else {
+            if ($_GET['ash'] == 'no') {
+                $goblins = false;
+            }
+        }
+    }
+
+    if (!isset($_GET['ash'])) {
+        $goblins = true;
+    }
+
+    if ($goblins == true) {
+        include 'inc/ash.html';
+    }
+    ?>
+    <?php
+    $goblins_1 = false;
+    if (isset($_GET['arborvitae' && 'aralia'])) {
+        if ($_GET['arborvitae' && 'aralia'] == 'yes') {
+            $goblins_1 = true;
+        } else {
+            if ($_GET['arborvitae' && 'aralia'] == 'no') {
+                $goblins_1 = false;
+            }
+        }
+    }
+
+    // if (!isset($_GET['arborvitae' && 'aralia'])) {
+    //     $goblins = true;
+    // }
+
+    if ($goblins_1 == true) {
+        include 'inc/combo_1.html';
+    }
+    ?>
+    <?php
+    $goblins_2 = false;
+    if (isset($_GET['arborvitae' && 'ash'])) {
+        if ($_GET['arborvitae' && 'ash'] == 'yes') {
+            $goblins_2 = true;
+        } else {
+            if ($_GET['arborvitae' && 'ash'] == 'no') {
+                $goblins_2 = false;
+            }
+        }
+    }
+
+    // if (!isset($_GET['arborvitae' && 'ash'])) {
+    //     $goblins = true;
+    // }
+
+    if ($goblins_2 == true) {
+        include 'inc/combo_2.html';
+    }
+    ?>
+    <?php
+    $goblins_3 = false;
+    if (isset($_GET['ash' && 'aralia'])) {
+        if ($_GET['ash' && 'aralia'] == 'yes') {
+            $goblins_3 = true;
+        } else {
+            if ($_GET['ash' && 'aralia'] == 'no') {
+                $goblins_3 = false;
+            }
+        }
+    }
+
+    // if (!isset($_GET['ash' && 'aralia'])) {
+    //     $goblins = true;
+    // }
+
+    if ($goblins_3 == true) {
+        include 'inc/combo_3.html';
+    }
+    ?>
+    <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
 
     <!-- jQuery -->
     <script src="js/jquery-3.3.1.min.js"></script>
